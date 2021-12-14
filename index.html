@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="golos.css">
+    <script src="https://kit.fontawesome.com/b37f782a2a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 id="rename" value=""></h1>
+    <div class="img">
+        <img src="img/da.PNG">
+
+    </div>
+    <p>
+        <textarea id="message"></textarea>
+    </p>
+    <div class="Button-Wrapper">
+    <button id="speak">Найти</button>
+    </div>
+  <p id=speaker></p>
+  <div id=sozialnetzwerke><a href="https://instagram.com/dumpling_ix?utm_medium=copy_link"><i class="fab fa-instagram"></i></a>
+    <a href="https://vk.com/nu_nahuyaa"><i class="fab fa-vk"></i></a></div>
+    <script>
+
+        let name=prompt('Как тебя зовут?')
+        alert("Добро пожаловать!"+" "+name)
+        
+        function speak(text){
+            const message= new SpeechSynthesisUtterance();
+            message.lang="ru-RU";
+            message.text=text;
+           
+
+            
+            window.speechSynthesis.speak(message);
+        }
+      
+        
+        const btnSpeak=document.querySelector("#speak");
+        const txtMessage=document.querySelector("#message");
+        const reName=document.querySelector("#rename")
+        const sozial=document.querySelector("#sozialnetzwerke")
+        const foto=document.querySelector(".img")
+        reName.innerHTML=name;
+        sozial.style.display='none';
+        foto.style.display='none';
+        
+   
+                   
+                
+      
+           
+       
+        btnSpeak.addEventListener("click", () =>{
+    
+            if(name=="Даля"){
+                switch(txtMessage.value){
+                case "Кто такой?": 
+                    txtMessage.value="Паштет";
+                    speak(txtMessage.value)
+                    break;
+                case "Общая информация":
+                    txtMessage.value="Тебя зовут Толеубекова Данеля Болатовна Твой адрес:Космонавтов ул. 229";
+                    speak(txtMessage.value)
+                    break;
+                case "Соц.сети":
+                    sozial.style.display='block';
+                    break;
+                case "Вадим лох":
+                    txtMessage.value="Я знал,что ты это напишешь,поэтому пошла нахуй"
+                    break;
+                case "Фото":
+                    foto.style.display='block';
+                    break
+                
+                
+                case "":
+                txtMessage.value="ну высри хоть что-то"
+                speak(txtMessage.value)
+                break
+                
+                case "Че есть?":
+                    txtMessage.value="1.Общая информация,2.Фото,3.Соц.сети"
+                    speak(txtMessage.value)
+                    break
+
+                default:
+                    txtMessage.value="А хуй там плавал,нету тут такого"
+                    speak(txtMessage.value)
+                }
+
+            }
+            if(name=="Дэн"){
+                txtMessage.value="Черножопый"
+                speak(txtMessage.value);  
+            }
+            else if(name=="Миша"){
+                txtMessage.value="Черножопый"
+                speak(txtMessage.value);
+            }
+            else if(name=="Мади"){
+                txtMessage.value="Обезжированный"
+                speak(txtMessage.value);
+            }
+         
+            else{
+              
+                switch(txtMessage.value){
+                case "Кто такой?": 
+                    txtMessage.value="Паште";
+                    speak(txtMessage.value)
+                    break;
+                case "Мой адрес":
+                    txtMessage.value="Komiss";
+                    speak(txtMessage.value)
+                    break;
+            }
+        }
+                
+               
+            
+           
+         
+            
+        })
+       
+    </script>
+</body>
+</html>

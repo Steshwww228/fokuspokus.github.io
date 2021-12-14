@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: sans-serif;
+}
+textarea{
+    width:100%;
+    height: 5rem;
+    padding: .5rem;
+    font-size: 1rem;
+}
+.Button-Wrapper{
+    position: relative;
+}
+#speak:hover{
+    box-shadow: 0 8px 65px -5px #CD106E;
+}
+#speak{
+letter-spacing: 2px;
+font-size: 22px;
+line-height: 68px;
+text-transform: uppercase;
+background: #Fc5185;
+color: #ffffff;
+border: none;
+border-radius: 10px;
+min-width: 200px;
+padding: 0 24px;
+box-shadow: 0 10px 60px -10px #CD106E;
+cursor: pointer;
+transform: perspective(250px) scale3d(1,1,1);
+transform: all 1s cubic-bezier(0.03,0.98,0.52,0.99);
+outline: none;
+}
+/* button{
+    padding: .5rem 1rem;
+    background-color:#008cba;
+    font-size: 1rem;
+    color:#fff;
+} */
+#sozialnetzwerke a{
+    
+    font-size: 50px;
+}
+img{
+    width: 500px;
+    height: 500px;
+}
